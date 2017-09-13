@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Logistic Solutions</title>
+
+    <link rel="stylesheet" type="text/css" href="./css/jquery.pagepiling.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css"/>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+    <script type="text/javascript" src="./js/jquery.pagepiling.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            /*
+             * Plugin intialization
+             */
+            $('#pagepiling').pagepiling({
+                direction: 'horizontal',
+                menu: '#menu',
+                anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7'],
+                sectionsColor: ['white', 'white', 'white', 'white', 'white', 'white', 'white'],
+                navigation: {
+                    'position': 'right',
+                    'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Page 4', 'Page 5', 'Page 6', 'Page 7']
+                },
+                afterRender: function () {
+                    $('#pp-nav').addClass('custom');
+                },
+                afterLoad: function (anchorLink, index) {
+                    if (index > 1) {
+                        $('#pp-nav').removeClass('custom');
+                    } else {
+                        $('#pp-nav').addClass('custom');
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+
+<header class="header">
+    <a href="#page1">
+        <img class="_logo" width="151" height="57" src="img/logo-mobile-black.png"
+             alt="Logistic Solutions">
+    </a>
+
+    <ul id="menu">
+        <li data-menuanchor="page2"><a href="#page2">О компании</a></li>
+        <li data-menuanchor="page3"><a href="#page3">Преимущества</a></li>
+        <li data-menuanchor="page4"><a href="#page4">География</a></li>
+        <li data-menuanchor="page5"><a href="#page5">Тарифы</a></li>
+        <li data-menuanchor="page6"><a href="#page6">Контакты</a></li>
+        <li data-menuanchor="page7"><a href="#page7">Информация</a></li>
+    </ul>
+</header>
+
+<div id="pagepiling">
+    <div class="section" id="section1">
+        <h1>МОРСКИЕ КОНТЕЙНЕРНЫЕ ПЕРЕВОЗКИ</h1>
+    </div>
+
+    <div class="section" id="section2">
+        <section class="about">
+            <div class="about__wrapper">
+                <p class="about__text">Logistic Solutions, это современная, хорошо организованная и
+                    клиентоориентированная транспортно-логистическая компания, которая объединяет в себе специалистов с
+                    большим стажем и опытом в сфере контейнерных перевозок.</p>
+                <p class="about__text">Наша основная деятельность — морские контейнерные перевозки, мы знаем о морском
+                    фрахте всё и сможем предложить Вам лучшие цены на рынке. Просто заполните заявку или позвоните нам и
+                    мы в кратчайшие сроки вышлем Вам актуальные цены.</p>
+                <a href="#" class="btn btn--prices">Посмотреть тарифы</a>
+            </div>
+        </section>
+    </div>
+
+    <div class="section" id="section3">
+        <section class="advanced">
+            <div class="advanced__wrapper">
+                <div class="advanced__items">
+                    <div class="advanced__item advanced__item--prices">
+                        <h3 class="advanced__itemTitle">Минимальные цены</h3>
+                        <p class="advanced__itemText">Благодаря прямым контрактам с судовладельцами</p>
+                    </div>
+                    <div class="advanced__item advanced__item--fast">
+                        <h3 class="advanced__itemTitle">Оперативность</h3>
+                        <p class="advanced__itemText">Быстро находим решения и согласовываем условия</p>
+                    </div>
+                    <div class="advanced__item advanced__item--relations">
+                        <h3 class="advanced__itemTitle">Отношения Win-win</h3>
+                        <p class="advanced__itemText">Долгосрочное и взаимовыгодное сотрудничество — <br>превыше всего
+                        </p>
+                    </div>
+                    <div class="advanced__item advanced__item--personal">
+                        <h3 class="advanced__itemTitle">Индивидуальное решение</h3>
+                        <p class="advanced__itemText">Предлагаем продуманную схему доставки с учетом ваших
+                            потребностей</p></div>
+                    <div class="advanced__item advanced__item--love">
+                        <h3 class="advanced__itemTitle">Любовь к тому,<br> что делаем</h3>
+                        <p class="advanced__itemText">Результат проделанной работы всегда оставляет у наших клиентов
+                            приятное впечатление и желание повторить!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="section" id="section4">
+        <section class="spread">
+            <div class="spread__wrapper">
+                <div class="worldwide-map"></div>
+                <div class="spread__lists">
+                    <ul class="spread__list">
+                        <li class="spread__listItem">Россия</li>
+                        <li class="spread__listItem">Евросоюз</li>
+                        <li class="spread__listItem">Дальний Восток (Китай, Сингапур, Тайланд, Вьетнам, Малайзия,
+                            Индонезия, Филипины, Тайвань, Юж. Корея)
+                        </li>
+                        <li class="spread__listItem">Япония</li>
+                    </ul>
+                    <ul class="spread__list">
+                        <li class="spread__listItem">США</li>
+                        <li class="spread__listItem">Мексика</li>
+                        <li class="spread__listItem">Южная Африка</li>
+                        <li class="spread__listItem">Индия, Шри-Ланка</li>
+                        <li class="spread__listItem">Пакистан</li>
+                        <li class="spread__listItem">Объединенные Арабские Эмираты</li>
+                        <li class="spread__listItem">Ангола</li>
+                        <li class="spread__listItem">Мозамбик</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="section" id="section5">
+        <section class="plans">
+            <div class="plans__wrapper">
+                <table class="plans__table">
+                    <thead class="plans__table-thead">
+                    <tr>
+                        <th>Условия</th>
+                        <th>Порт погрузки</th>
+                        <th>Тип оборудования</th>
+                        <th>Cтавка</th>
+                        <th>Cвободные дни<br> демередж/детеншен</th>
+                        <th>Ставка действует до</th>
+                        <th>Транзитное время</th>
+                        <th><p>Дополнительные условия</p></th>
+                    </tr>
+                    </thead>
+                    <tbody class="plans__tbody">
+                    <tr>
+                        <td data-label="Условия">
+                            FILO
+                        </td>
+                        <td data-label="Порт погрузки">
+                            Far East Base Ports
+                        </td>
+                        <td data-label="Тип оборудования">
+                            20'DV
+                        </td>
+                        <td data-label="Cтавка">
+                            $1 650
+                        </td>
+                        <td data-label="Cвободные дни">
+                            14
+                        </td>
+                        <td data-label="Ставка действует до">
+                            31.08.17
+                        </td>
+                        <td data-label="Транзитное время">
+                            35 - 42 дней
+                        </td>
+                        <td data-label="Дополнительные условия">
+                            <a href="#" class="btn btn--hide">Скрыть</a>
+                            <div class="plans__tbody-addconditions">
+                                <p>1. Релиз в СПб включен в ставку.</p>
+                                <p>2. Экспедирование и вывоз контейнера с грузом до 20 тонн:</p>
+                                <ul>
+                                    <li> > СПб 15000 руб</li>
+                                    <li> > Москва 52000 руб. ставки для груза cвыше 20 тонн — по запросу.</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <table class="plans__table">
+                    <thead class="plans__table-thead">
+                    <tr>
+                        <th>Условия</th>
+                        <th>Порт погрузки</th>
+                        <th>Тип оборудования</th>
+                        <th>Cтавка</th>
+                        <th>
+                            <p>Cвободные дни </p>
+                            <p>демередж/детеншен</p>
+                        </th>
+                        <th>Ставка действует до</th>
+                        <th>Транзитное время</th>
+                        <th>
+                            <p>Дополнительные условия</p>
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody class="plans__tbody">
+                    <tr>
+                        <td data-label="Условия">
+                            FILO
+                        </td>
+                        <td data-label="Порт погрузки">
+                            Far East Base Ports
+                        </td>
+                        <td data-label="Тип оборудования">
+                            40'DV/HC
+                        </td>
+                        <td data-label="Cтавка">
+                            $2 390
+                        </td>
+                        <td data-label="Cвободные дни">
+                            14
+                        </td>
+                        <td data-label="Ставка действует до">
+                            31.08.17
+                        </td>
+                        <td data-label="Транзитное время">
+                            35 - 42 дней
+                        </td>
+                        <td data-label="Дополнительные условия">
+                            <a href="#" class="btn btn--view">Посмотреть</a>
+                            <div class="plans__tbody-addconditions">
+                                <p>1. Релиз в СПб включен в ставку.</p>
+                                <p>2. Экспедирование и вывоз контейнера с грузом до 20 тонн:</p>
+                                <ul>
+                                    <li> > СПб 15000 руб</li>
+                                    <li> > Москва 52000 руб. ставки для груза cвыше 20 тонн — по запросу.</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <a class="btn btn--show-all">Показать все тарифы</a>
+            </div>
+        </section>
+    </div>
+
+    <div class="section" id="section6">
+        <section class="contacts">
+            <div class="contacts__wrapper">
+                <div class="contacts__items">
+                    <div class="contacts__item  contacts__item--1">
+                        <div class="contacts__itemName">Александр Иванов</div>
+                        <p class="contacts__itemAppointment">Генеральный директор</p>
+                    </div>
+                    <div class="contacts__item contacts__item--2">
+                        <div class="contacts__itemName">Николай Иванов</div>
+                        <p class="contacts__itemAppointment">Исполнительный директор</p>
+                    </div>
+                    <div class="contacts__item contacts__item--3">
+                        <div class="contacts__itemName">Мира Григорьева</div>
+                        <p class="contacts__itemAppointment">Главный менеджер</p>
+                    </div>
+                    <div class="contacts__item contacts__item--4">
+                        <div class="contacts__itemName">Мира Григорьева</div>
+                        <p class="contacts__itemAppointment">Менеджер</p>
+                    </div>
+                    <div class="contacts__item contacts__item--5">
+                        <div class="contacts__itemName">Наталья Киселева</div>
+                        <p class="contacts__itemAppointment">Менеджер</p>
+                    </div>
+                </div>
+
+                <div class="contacts__location">
+                    <div class="contacts__map">
+                        <iframe class="contacts__iframe contacts__frame--hidden"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2002.036065708757!2d30.270906716347813!3d59.88175058185555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963a8062176a79%3A0x98c0206625f64662!2z0YPQuy4g0JLQvtC30YDQvtC20LTQtdC90LjRjywgMjAsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTgxODg!5e0!3m2!1sru!2sru!4v1504986411696"
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="contacts__attributes">
+                        <p class="contacts__text">ООО «Логистик Солюшнс»</p>
+                        <a href="#" class="btn btn--showAttributes">посмотреть реквизиты</a>
+                        <p class="contacts__address">198188, г. Санкт-Петербург, <br>ул. Возрождения, д. 20 «А»</p>
+                        <a class="contacts__phone" href="tel: +7(812) 331-8673">tel: +7(812) 331-8673</a>
+                        <a class="contacts__phone" href="tel: +7(812) 331-8674">fax: +7(812) 331-8674</a>
+                        <a href="mailto:info@logistic-solutions.ru"
+                           class="contacts__email">info@logistic-solutions.ru</a>
+                    </div>
+                </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer__wrapper">
+                <p class="footer__copyright">&copy; 2017. Logistic Solutions</p>
+                <p class="footer__author">Сайт разработан <a href="#" class="footer__link">интернет-студией</a> МАЙЕР
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <div class="section" id="section7">
+        <h1>Horizontal Scroll 6</h1>
+        <p>pagePiling does it easy for you!</p>
+    </div>
+</div>
+
+</body>
+</html>
